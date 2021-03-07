@@ -27,6 +27,7 @@ export const GlobalStyle = createGlobalStyle`
 
     p, a, li {
         font-family: 'Roboto', sans-serif;
+        text-decoration: none;
     }
     
     h1, h2 {
