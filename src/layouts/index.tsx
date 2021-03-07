@@ -32,9 +32,11 @@ export const Main = styled.section`
     margin: 0 auto;
     max-width: 600px;
     width: 100%;
-    padding: 50px 4px;
+    padding: 0;
+    padding-bottom: 100px;
     @media (min-width: 800px) {
         padding-top: 150px;
+        padding-bottom: 150px;
         max-width: 900px;
     }
 `;

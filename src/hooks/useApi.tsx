@@ -8,6 +8,8 @@ export function useCoinApi<T>(url: string): { response: any; error: any; loading
     useEffect(() => {
         const fetchData = async (): Promise<void> => {
             try {
+                console.log(`${baseUrl}${url}`);
+
                 const res = await fetch(`${baseUrl}${url}`);
                 const data = await res.json();
                 setResponse(data);

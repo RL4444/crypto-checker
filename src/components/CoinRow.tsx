@@ -18,11 +18,10 @@ import { ICoinRowDataResponseObject } from '../types/market';
 
 interface ICoinRowTableProps {
     data: ICoinRowDataResponseObject;
-    click: () => void;
     key: any;
 }
 
-export default ({ data, click }: ICoinRowTableProps) => {
+export default ({ data }: ICoinRowTableProps) => {
     const {
         name,
         image,

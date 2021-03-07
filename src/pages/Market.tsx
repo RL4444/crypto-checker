@@ -29,9 +29,11 @@ export default () => {
             {response && response.length > 0 && <TableHeader />}
             {response &&
                 response.map((row: ICoinRowDataResponseObject) => {
-                    return <CoinRow key={row.id} data={row} click={() => null} />;
+                    return <CoinRow key={row.id} data={row} />;
                 })}
+            {/* replace with Spinner */}
             {loading && <p>Loading...</p>}
+            {error && <h3>Error Loading Data</h3>}
         </>
     );
 };
