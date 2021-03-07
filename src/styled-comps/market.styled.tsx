@@ -39,16 +39,28 @@ export const CurrentPriceWrapper = styled.h4`
     margin-left: 20px;
     display: block;
     padding: 2px;
+    font-size: 14px;
+    white-space: nowrap;
     @media (min-width: 800px) {
+        font-size: 16px;
         margin-left: 40px;
     }
 `;
 
-export const ChangeWrapper1 = styled(CurrentPriceWrapper)`
+export const ChangeWrapper1 = styled.p`
     margin-left: 10px;
+    text-align: left;
+    margin-left: 20px;
+    display: block;
     box-sizing: border-box;
     width: 80px;
+    font-size: 14px;
+    white-space: nowrap;
+    @media (min-width: 400px) {
+        margin-left: 20px;
+    }
     @media (min-width: 800px) {
+        font-size: 16px;
         margin-left: 40px;
     }
 `;
