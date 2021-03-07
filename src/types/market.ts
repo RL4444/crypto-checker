@@ -1,4 +1,4 @@
-export interface IMarketResponseObject {
+export interface ICoinRowDataResponseObject {
     ath: number;
     ath_change_percentage: number;
     ath_date: string;
@@ -34,7 +34,7 @@ export interface IMarketResponseObject {
 }
 
 export type IResponseA = {
-    response?: IMarketResponseObject[];
+    response?: ICoinRowDataResponseObject[];
     error?: string;
     loading: boolean;
 };
