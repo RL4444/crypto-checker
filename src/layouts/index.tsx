@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Card = styled.div`
+    text-decoration: none;
     display: flex;
     align-items: center;
     background: 'black';
@@ -27,11 +28,13 @@ export const Card = styled.div`
 `;
 
 export const Main = styled.section`
+    text-decoration: none;
     margin: 0 auto;
     max-width: 600px;
     width: 100%;
     padding: 50px 4px;
     @media (min-width: 800px) {
+        padding-top: 150px;
         max-width: 900px;
     }
 `;
