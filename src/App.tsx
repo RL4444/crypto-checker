@@ -1,17 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
-import Markets from './pages/Markets';
+import Market from './pages/Market';
+import News from './pages/News';
+import Coin from './pages/Coin';
 import { Main, Card } from './layouts';
 
 function App() {
     return (
         <div className='App'>
-            <Navbar />
-            <Main>
-                <Markets />
-            </Main>
+            <Router>
+                <Navbar />
+                <Main>
+                    <Route path='/coin/:id' component={Coin} />
+                    <Route path='/news' component={News} />
+                    <Route path='/' exact component={Market} />
+                </Main>
+            </Router>
         </div>
     );
 }
