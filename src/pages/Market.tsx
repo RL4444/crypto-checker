@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import useApi from '../hooks/useApi';
-import MarketRow from '../components/MarketRow';
+import { useCoinApi } from '../hooks/useApi';
 
-import { IMarketResponseObject, IResponseA } from '../types/market';
+import TableHeader from '../components/MarketHeader';
+import CoinRow from '../components/CoinRow';
+
+import { ICoinRowDataResponseObject, IResponseA } from '../types/market';
 
 interface ICurrency {
     currency: string;
@@ -20,15 +22,14 @@ export default () => {
     const url: string = `vs_currency=${currency.currency}&order=market_cap_desc&per_page=${
         limit.limit
     }&page=1&sparkline=false&price_change_percentage=${encodeURIComponent('1h,24h,7d,30d,200d,1y')}`;
-    const { response, error, loading }: IResponseA = useApi(`/coins/markets?${url}`);
-
-    console.log('response ', response);
+    const { response, error, loading }: IResponseA = useCoinApi(`/coins/markets?${url}`);
 
     return (
         <>
+            {response && response.length > 0 && <TableHeader />}
             {response &&
-                response.map((node: IMarketResponseObject) => {
-                    return <MarketRow key={node.id} data={node} click={() => null} />;
+                response.map((row: ICoinRowDataResponseObject) => {
+                    return <CoinRow key={row.id} data={row} click={() => null} />;
                 })}
             {loading && <p>Loading...</p>}
         </>
