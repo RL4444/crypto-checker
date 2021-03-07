@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-function useApi<T>(url: string): { response: any; error: any; loading: boolean } {
+export function useCoinApi<T>(url: string): { response: any; error: any; loading: boolean } {
     const baseUrl = 'https://api.coingecko.com/api/v3/';
     const [response, setResponse] = useState<object[] | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
@@ -22,4 +22,10 @@ function useApi<T>(url: string): { response: any; error: any; loading: boolean }
     return { response, error, loading };
 }
 
-export default useApi;
+export function useNewsApi<T>(): { response: any; error: any; loading: any } {
+    const baseUrl = 'https://api.coingecko.com/api/v3/';
+    const [response, setResponse] = useState<object[] | null>(null);
+    const [loading, setLoading] = useState<boolean>(true);
+    const [error, setError] = useState<Error | null>(null);
+    return { response, error, loading };
+}
