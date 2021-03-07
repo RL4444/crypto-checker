@@ -57,6 +57,9 @@ export const GlobalStyle = createGlobalStyle`
     .c-green {
         color: ${theme.colors.green}
     }
+    .c-orange {
+        color: ${theme.colors.orange}
+    }
     
     body {
         margin: 0;

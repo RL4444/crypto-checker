@@ -11,6 +11,7 @@ const ChartWrapper = styled.div`
     }
 `;
 
+// HighCharts throws errors with TypeScript types
 export default ({ data }: any) => {
     const options: Highcharts.Options = {
         chart: {
@@ -21,6 +22,7 @@ export default ({ data }: any) => {
             text: 'Prices over 30 days',
             style: {
                 color: '#efefef',
+                fontFamily: "'Roboto', sans-serif",
             },
         },
         plotOptions: {
@@ -43,6 +45,7 @@ export default ({ data }: any) => {
             labels: {
                 style: {
                     color: '#efefef',
+                    fontFamily: "'Roboto', sans-serif",
                 },
             },
             title: {
@@ -51,6 +54,7 @@ export default ({ data }: any) => {
                 style: {
                     color: '#efefef',
                     'text-anchor': 'start',
+                    fontFamily: "'Roboto', sans-serif",
                 },
                 rotation: 0,
                 y: -20,
@@ -62,6 +66,7 @@ export default ({ data }: any) => {
             labels: {
                 style: {
                     color: '#efefef',
+                    fontFamily: "'Roboto', sans-serif",
                 },
             },
         },

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Wrapper = styled.nav`
     width: 100%;
@@ -32,7 +33,9 @@ export default () => {
     return (
         <Wrapper>
             <Inner>
-                <Logo>Crypto Check</Logo>
+                <Link to='/'>
+                    <Logo>Crypto Check</Logo>
+                </Link>
             </Inner>
         </Wrapper>
     );

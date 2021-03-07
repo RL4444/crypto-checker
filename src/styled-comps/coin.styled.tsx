@@ -22,7 +22,9 @@ export const MainImgWrapper = styled.div`
     min-width: 80px;
     min-height: 80px;
     border-radius: 50%;
+    overflow: hidden;
     @media (min-width: 800px) {
+        border-radius: 50%;
         max-width: 120px;
         max-height: 120px;
         min-width: 120px;

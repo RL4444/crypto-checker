@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import { ICoinHeaderResponse } from '../types/coin';
 
@@ -32,6 +33,12 @@ export default ({ id }: ICoinChildProps) => {
                 <div>Loading</div>
             ) : !error ? (
                 <>
+                    {!loading && (
+                        <Link to='/'>
+                            <p className='c-orange w-100 ta-l ml-1'>back</p>
+                        </Link>
+                    )}
+
                     <TopRow className={loading ? 'skeleton' : ''}>
                         <div className='d-flex fd-col ai-c p-1'>
                             <MainImgWrapper className={loading ? 'skeleton' : ''}>
