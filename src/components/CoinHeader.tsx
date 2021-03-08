@@ -7,6 +7,8 @@ import { ICoinHeaderResponse } from '../types/coin';
 import { useCoinApi } from '../hooks/useApi';
 import { convertTsToUnixString } from '../utils/index';
 
+import Spinner from './Spinner';
+
 import {
     TopRow,
     MainImgWrapper,
@@ -30,7 +32,7 @@ export default ({ id }: ICoinChildProps) => {
     return (
         <>
             {loading ? (
-                <div>Loading</div>
+                <></>
             ) : !error ? (
                 <>
                     {!loading && (
@@ -64,7 +66,7 @@ export default ({ id }: ICoinChildProps) => {
                     </TopRow>
                 </>
             ) : (
-                <div>error loading things </div>
+                <div>error loading data </div>
             )}
         </>
     );

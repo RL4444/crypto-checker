@@ -5,6 +5,7 @@ import { useCoinApi } from '../hooks/useApi';
 
 import TableHeader from '../components/MarketHeader';
 import CoinRow from '../components/CoinRow';
+import Spinner from '../components/Spinner';
 
 import { ICoinRowDataResponseObject, IResponseA } from '../types/market';
 
@@ -26,14 +27,13 @@ export default () => {
 
     return (
         <>
-           
             {response && response.length > 0 && <TableHeader />}
             {response &&
                 response.map((row: ICoinRowDataResponseObject) => {
                     return <CoinRow key={row.id} data={row} />;
                 })}
             {/*  TODO:replace with Spinner */}
-            {loading && <p>Loading...</p>}
+            {loading && <Spinner />}
             {error && <h3>Error Loading Data</h3>}
         </>
     );

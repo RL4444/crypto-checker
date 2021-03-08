@@ -4,9 +4,8 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import Market from './pages/Market';
-import News from './pages/News';
 import Coin from './pages/Coin';
-import { Main, Card } from './layouts';
+import { Main } from './layouts';
 
 function App() {
     return (
@@ -15,7 +14,6 @@ function App() {
                 <Navbar />
                 <Main>
                     <Route path='/coin/:id' component={Coin} />
-                    <Route path='/news' component={News} />
                     <Route path='/' exact component={Market} />
                 </Main>
             </Router>

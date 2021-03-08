@@ -6,6 +6,7 @@ import { IResponseHistoricalData } from '../types/coin';
 import { useCoinApi } from '../hooks/useApi';
 import { convertTsToUnixString } from '../utils/index';
 
+import Spinner from './Spinner';
 import Chart from './Chart';
 
 interface ICoinChildProps {
@@ -21,7 +22,7 @@ export default ({ id }: ICoinChildProps) => {
 
     return (
         <>
-            {loading && <div>loading</div>}
+            {loading && <Spinner />}
             {!loading && <Chart data={response} />}
         </>
     );
