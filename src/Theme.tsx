@@ -18,7 +18,8 @@ export const GlobalStyle = createGlobalStyle`
     .App {
         text-align: center;
         min-height: 100vh;
-        background-color: #040639;
+        /* background-color: #040639; */
+        background-color: #535353;
         /* background: rgb(21,6,46);
         background: linear-gradient(180deg, #030108 20%, rgba(9,25,128,1) 81%); */
     }
